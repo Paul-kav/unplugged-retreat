@@ -141,11 +141,12 @@ textarea {
    }
 
    img {
-  
+    width: 100%;
    }
 
    figure {
-
+    margin: 0;
+    padding-right: 100px;
    }
 
    address {
@@ -178,6 +179,14 @@ textarea {
     flex-flow: row wrap;
     margin: 0;
    }
+
+   header figure {
+    width: 60%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-flow: row wrap;
+}
 
   .header-divider {
     width: 100%;
@@ -239,9 +248,13 @@ textarea {
    /* Hero Area */
 
   .hero-area {
+    background-image: url('../img/jake-melara-30679-unsplash.jpg');
+    background-size: cover;
+    background-position: center;
+    min-height: 500px;
     display: flex;
     justify-content: center;
-    flex-flow: row wrap;
+    flex-flow: row wrap; 
    }
 
   .hero-area h1 {
@@ -289,16 +302,19 @@ textarea {
    /* Features */
 
   .features {
+    background-image:url('../img/rawpixel-800820-unsplash1.jpg');
+    background-size: cover;
+    background-position: center;
     display: flex;
     justify-content: center;
-    flex-flow: row-reverse;
+    flex-flow: row wrap;
    }
 
   .features .features-items {
     display: flex;
     justify-content: center;
     align-items: center;
-    flex-flow: column-reverse;
+    flex-flow: row wrap;
    }
 
   .features article {
@@ -307,6 +323,7 @@ textarea {
    }
 
   .features p {
+    text-align: center;
     margin: 0;
    }
 
@@ -317,10 +334,11 @@ textarea {
    /* Reviews */
   
   .reviews {
+    background-color: #2a423a;
     display: flex;
     justify-content: center;
     flex-flow: row wrap;
-    background-color: #2a423a;
+    
    }
 
   .reviews h3 {
@@ -492,6 +510,10 @@ textarea {
     justify-content: space-between;
   }
 
+ header figure {
+   width: 37%;
+ }
+
   header nav {
     width: 16%;
   }
@@ -506,7 +528,9 @@ textarea {
   }
 
   /* Hero Area */
-
+  .hero-area {
+    min-height: 600px;
+  }
   /* Aside */
   aside .content-wrapper {
     margin: 50px 0;
@@ -527,12 +551,12 @@ textarea {
     display: flex;
     justify-content: center;
     align-items: center;
-    flex-flow: row-reverse;
-    flex-basis: 13.13%;
+    flex-flow: column wrap;
+    flex-basis: 50%;
   }
   
   .features .features-item-description {
-    width:
+    width: 65%;
   }
 
   /* Reviews */
@@ -635,7 +659,7 @@ flex-basis: 40%;
     }
 
     .features article {
-      flex-basis: 16%;
+      flex-basis: 33%;
     }
 
     /* Reviews */
