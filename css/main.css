@@ -107,13 +107,13 @@ textarea {
    body {
     font-family: 'Open Sans', sans-serif;
     font-size: 1em;
-    text-transform: none;
+    text-align: left;
+    color: #717174;
    }
 
    ul,
    ol {
     list-style-type: none;
-    line-height: auto;
    }
 
    a {
@@ -124,18 +124,18 @@ textarea {
    h2 {
     font-family: 'Poppins', sans-serif;
     font-size: 2.25em;
-    color: #e1e2ea;
+    font-weight: 500;
    }
 
    h3,
    h4 {
     font-family: 'Poppins', sans-serif;
     font-size: 1.875em;
-    color: #e2e3ed;
+    font-weight: 500;
+    margin: 19px 0;
    }
 
    p {
-    color: #e1e2ea;
     line-height: 1.125em;
     font-size: 0.875em;
    }
@@ -150,13 +150,14 @@ textarea {
    }
 
    address {
-    font-style: italic;
+    font-style: none;
    }
 
   .content-wrapper {
     width: 90%;
     margin: 50px 0;
   }
+
    /* -------- Base Header - Footer Styles --------*/
 
   header,
@@ -192,15 +193,18 @@ textarea {
     width: 100%;
     height: 1px;
     margin: 10px 0 20px 0;
+    background: #3a3a3a;
   }
   
   header nav {
+    width: 60%;
+    font-size: 
+    font-weight: 700;
+    text-transform: uppercase;
     display: flex;
     justify-content: space-around;
     align-items: center;
     flex-flow: row wrap;
-    width: 60%;
-    
    }
 
   header nav ul {
@@ -209,7 +213,8 @@ textarea {
     width: 100%;
   }
 
-   footer {
+  footer {
+     text-align: center;
      flex-direction: column;
    }
 
@@ -220,7 +225,7 @@ textarea {
 
   footer .social-icons p {
     display: flex;
-    justify-content: space-around;
+    justify-content: center;
     align-items: center;
   }
 
@@ -497,16 +502,23 @@ textarea {
     max-width: 640px;
     margin: 100px 0;
 }
+
+h2 {
+  font-size: 2.25em;
+  line-height: auto;
+}
+
+h3 {
+  font-size: 1.5em;
+}
   /* Header */
   header {
-    display: flex;
     justify-content: space-around;
-    text-transform: uppercase;
+    padding: 28px;
   }
 
   header .content-wrapper {
     width: 100%;
-    display: flex;
     justify-content: space-between;
   }
 
@@ -531,12 +543,16 @@ textarea {
   .hero-area {
     min-height: 600px;
   }
+
+  .hero-area h1 {
+    font-size: 3em;
+  }
   /* Aside */
   aside .content-wrapper {
     margin: 50px 0;
     display: flex;
     justify-content: space-between;
-    flex-flow: row;
+    flex-flow: row wrap;
   }
 
   aside .content-wrapper .form-description,
@@ -546,7 +562,9 @@ textarea {
   }
 
   /* Features */
-
+  .features h2 {
+    margin-bottom: 20px;
+  }
   .features article {
     display: flex;
     justify-content: center;
@@ -560,13 +578,17 @@ textarea {
   }
 
   /* Reviews */
-
   .reviews article {
     display: flex;
-    justify-content: flex-end;
+    justify-content: space-between;
   }
-  .reviews article div {
+  .reviews article div,
+  .reviews article figure {
     width: 40%;
+  }
+
+  .reviews h3 {
+    width: 90%;
   }
 
   /* Footer */
@@ -575,9 +597,11 @@ textarea {
     margin: 100px 0;
   }
 
-  .footer-content {
+  footer .footer-content {
     display: flex;
     justify-content: space-between;
+    align-items: center;
+    flex-direction: row;
   }
 
   footer .contact {
@@ -586,6 +610,15 @@ textarea {
 
   footer .copyright {
     width: 100%;
+  }
+
+  footer h4 {
+    font-size: 1.286em;
+    margin-bottom: 40px;
+  }
+
+  footer p {
+    line-height: 1.67;
   }
 
   footer .copyright {
@@ -597,6 +630,7 @@ textarea {
   .mission-content {
     display: flex;
     justify-content: space-between;
+    align-items: center;
     padding-top: 20px;
   }
 
@@ -614,6 +648,10 @@ textarea {
     align-items: flex-start;
   }
 
+  .contact-content h4 {
+    font-size: 1.5em;
+  }
+
 
   /* -------- FAQ Page --------*/
 
@@ -628,6 +666,12 @@ flex-basis: 40%;
   .faq h2 {
     width: 100%;
   }
+
+  .faq h4,
+  .faq p {
+    font-size: 0.875em;
+    line-height: 1.125;
+  }
 }
 
 @media only screen and (min-width: 1200px) {
@@ -638,14 +682,32 @@ flex-basis: 40%;
     max-width: 960px;
   }
 
+  header {
+    padding: 20px 0;
+  }
+
+  h2 {
+    font-size: 2.25em;
+  }
+
+  h3,
+  h4 {
+    font-size: 1.875em;
+  }
+
+  p {
+    font-size: 1.125em;
+  }
+
   /* Hero Area */
   .hero-area h1 {
-    width: 57%;
+    width: 80%;
+    font-size: 3.75em;
   }
 
   /* Aside */
   aside .content-wrapper {
-    justify-content: space-between;
+    justify-content: space-around;
   }
 
     aside .content-wrapper .form-description,
@@ -653,9 +715,13 @@ flex-basis: 40%;
       width: 26%;
     }
 
+    .form-description p {
+      font-size: 1.125em;
+    }
+
     /* Features */
     .features h2 {
-      width: 66%;
+      width: 87%;
     }
 
     .features article {
@@ -665,6 +731,14 @@ flex-basis: 40%;
     /* Reviews */
     .reviews article div {
       width: 38%;
+    }
+
+    .reviews h2 {
+
+    }
+
+    .reviews h4 {
+      
     }
 
     /* -------- About Page --------*/
