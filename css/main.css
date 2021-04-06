@@ -197,7 +197,7 @@ textarea {
   
   header nav {
     width: 60%;
-    font-size: 
+    font-size: 1.125em;
     font-weight: 700;
     text-transform: uppercase;
     display: flex;
@@ -333,6 +333,11 @@ textarea {
 
   .features h2 {
     margin-bottom: 60px;
+   }
+
+   .features i {
+     font-size: 3.75em;
+     margin-bottom: 40px;
    }
 
    /* Reviews */
